@@ -110,7 +110,8 @@ const DetailPost = () => {
                                     <td className=" p-4">{posts[0]?.user?.phone}</td>
                                 </tr>
                                 <tr>
-                                    <td className=" p-4">zalo</td>?<td className=" p-4">{posts[0]?.user?.zalo}</td>
+                                    <td className=" p-4"> </td>
+                                    <td className=" p-4">{posts[0]?.user?.zalo}</td>
                                 </tr>
                             </tbody>
                         </table>
