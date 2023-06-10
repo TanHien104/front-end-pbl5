@@ -19,7 +19,7 @@ const Item = ({ images, user, title, star, description, attributes, address, key
 
     return (
         <div key={key} className="w-full flex items-start border-orange-700 border-t p-4 cursor-pointer">
-            <Link to={`/${path.DETAIL_POST}/${formatVietnameseToString(title?.replace('/',''))}/${id}`} className="w-[42%] h-[240px] flex ">
+            <Link to={`/${path.DETAIL_POST}/${formatVietnameseToString(title?.replace('/',''))}/${id}`} className="w-[45%] h-[240px] flex ">
                 <div className="w-full flex gap-[2px] items-start flex-wrap relative">
                     {images?.length > 4 &&
                         images?.filter((item, index) =>
@@ -42,7 +42,7 @@ const Item = ({ images, user, title, star, description, attributes, address, key
                     </span>
                 </div>
             </Link>
-            <div className="w-[58%] pl-2">
+            <div className="w-[55%] pl-2">
                 <div className="flex justify-between">
                     <Link to={`/${path.DETAIL_POST}/${formatVietnameseToString(title?.replace('/',''))}/${id}`} className="w-full flex gap-1">
                         <span className=" text-red-600 font-medium">

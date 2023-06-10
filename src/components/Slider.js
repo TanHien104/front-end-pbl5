@@ -9,42 +9,25 @@ var settings = {
     slidesToScroll: 1,
 };
 const SliderCustom = ({ images }) => {
-    console.log(images);
+    
     return (
         <div className="w-4/5">
             <Slider {...settings}>
-                <div className="bg-black w-full h-[320px] flex justify-center">
-                    <img
-                        src="https://pt123.cdn.static123.com/images/thumbs/900x600/fit/2023/03/29/10_1680062125.jpg"
-                        alt=""
-                        className=" h-[320px] m-auto object-contain"
-                    />
+                {images && images?.length > 0 && images?.map((item,index) => {
+                    console.log('check item img',item)
+                    return (
+                        <div key={index} className="bg-black w-full h-[320px] flex justify-center">
+                        <img
+                            src={item}
+                            alt=""
+                            className=" h-[320px] m-auto object-contain"
+                        />
                     
-                </div>
-                <div className="bg-black w-full h-[320px] flex justify-center">
-                    <img
-                        src="https://pt123.cdn.static123.com/images/thumbs/900x600/fit/2023/03/29/10_1680062125.jpg"
-                        alt=""
-                        className=" h-[320px] m-auto object-contain"
-                    />
-                    
-                </div>
-                <div className="bg-black w-full h-[320px] flex justify-center">
-                    <img
-                        src="https://pt123.cdn.static123.com/images/thumbs/900x600/fit/2023/03/29/10_1680062125.jpg"
-                        alt=""
-                        className=" h-[320px] m-auto object-contain"
-                    />
-                    
-                </div>
-                <div className="bg-black w-full h-[320px] flex justify-center">
-                    <img
-                        src="https://pt123.cdn.static123.com/images/thumbs/900x600/fit/2023/03/29/10_1680062125.jpg"
-                        alt=""
-                        className=" h-[320px] m-auto object-contain"
-                    />
-                    
-                </div>
+                        </div>
+                    )
+                }) }
+                
+               
             </Slider>
         </div>
     );

@@ -10,7 +10,7 @@ const DetailPost = () => {
     let dispatch = useDispatch();
     let { GoLocation, GiMoneyStack, BiArea, BsStopwatch, BsHash } = icons;
     let { posts } = useSelector((state) => state.post);
-    console.log(posts);
+    
     useEffect(() => {
         postId && dispatch(actions.getPostsLimit({ id: postId }));
     }, [postId]);
@@ -56,10 +56,11 @@ const DetailPost = () => {
                 <div className="mt-8">
                     <h3 className="font-semibold text-xl my-4">Thông tin mô tả</h3>
                     <div className="flex flex-col gap-2">
-                        {posts[0]?.description &&
+                        <span>{posts[0]?.description ? JSON.parse(posts[0]?.description) : ''}</span>
+                        {/* {posts[0]?.description &&
                             JSON.parse(posts[0]?.description)?.map((item, index) => {
                                 return <span key={index}>{item}</span>;
-                            })}
+                            })} */}
                     </div>
                     <div className="mt-8">
                         <h3 className="font-semibold text-xl my-4">Đặc điểm tin đăng</h3>
