@@ -53,7 +53,10 @@ export default function Login({}) {
     setIsRegister(location.state?.flag);
   }, [location.state?.flag]);
   useEffect(() => {
-    Swal.fire('Oops !',msg,'error')
+    if(msg){
+      Swal.fire('Oops !',msg,'error')
+
+    }
   },[msg,update])
   useEffect(() => {
     
